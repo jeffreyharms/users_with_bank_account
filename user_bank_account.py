@@ -47,7 +47,11 @@ class User:
         User.list_users.append(self)
         
     def display_user_balance(self):
+        print("Name: ", self.name)
+        print("email: ", self.email_address)
+        print("Bank: ", self.bank_name)
         print("Balance: ", self.account.balance)
+        print("Interest: ", self.account.int_rate)
         
     @classmethod
     def all_users(cls):
@@ -62,11 +66,6 @@ Gaston.account.change_bank_name("E Corp FCU")
 
 Gaston.account.deposit(500)
 
+# Gaston.account.deposit(250).deposit(500).deposit(750).withdraw(1000).display_account_info()
+
 Gaston.display_user_balance()
-
-
-# account_1 = BankAccount(0.03, 5000)
-# account_2 = BankAccount(0.05, 20)
-
-# account_1.deposit(250).deposit(500).deposit(750).withdraw(1000).display_account_info()
-# account_2.deposit(400).deposit(350).withdraw(25).withdraw(290).withdraw(50).withdraw(200).yield_interest().display_account_info()
